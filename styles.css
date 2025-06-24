@@ -4,11 +4,22 @@
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-body {
-  margin: 10px auto;
-  max-width: 800px;
-  font-family: monospace;
-  overflow-y: scroll;
+.recipe-container-small {
+  display: none;
+}
+@media (max-width: 767px) {
+  .recipe-container {
+    display: none;
+  }
+  .recipe-container-small {
+    display: block;
+  }
+  .img-container {
+    height: fit-content;
+  }
+  .img-container img {
+    margin: 0 !important;
+  }
 }
 
 h1,
@@ -32,10 +43,8 @@ h3 {
 }
 
 p {
-  background: var(--secondary-color);
-  padding: 20px;
   border-radius: 4px;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.5;
   text-align: center;
 }
@@ -75,13 +84,9 @@ p {
   display: block;
 }
 
-.about-paragraphs {
-  display: flex;
-  margin: 30px 0;
-}
-
 .about-paragraphs p {
-  margin: 10px;
+  margin: 50px;
+  text-align: center;
 }
 
 .email-link {
